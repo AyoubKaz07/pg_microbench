@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- **Linux Only**: Relies on the `perf_event_open` syscall. (
+- **Linux Only**: Relies on the `perf_event_open` syscall.
 - **Privileges**: Requires access to hardware counters so: `sudo sysctl -w kernel.perf_event_paranoid=-1`
 
 ## Some things
