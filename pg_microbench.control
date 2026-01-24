@@ -1,0 +1,4 @@
+comment = 'Perf stat like counts on query, planner and executor phases using Linux perf_event_open'
+default_version = '1.0'
+module_pathname = '$libdir/pg_microbench'
+relocatable = true
