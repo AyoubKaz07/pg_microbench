@@ -7,6 +7,7 @@
 #include "utils/builtins.h"
 #include "tcop/utility.h"
 #include "utils/varlena.h"
+#include "commands/explain.h"
 
 #include <linux/perf_event.h>
 #include <sys/syscall.h>
