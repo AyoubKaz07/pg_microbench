@@ -279,7 +279,7 @@ static void guc_assign_scopes(const char *newval, void *extra)
 }
 
 static PlannedStmt *pg_microbench_planner(Query *parse, const char *query_string,
-                                          int cursorOptions, ParamListInfo boundParams)
+                                          int cursorOptions, ParamListInfo boundParams, ExplainState *es)
 {
   PlannedStmt *result;
   bool should_measure;
@@ -292,9 +292,9 @@ static PlannedStmt *pg_microbench_planner(Query *parse, const char *query_string
   }
 
   if (prev_planner_hook) {
-    result = prev_planner_hook(parse, query_string, cursorOptions, boundParams);
+    result = prev_planner_hook(parse, query_string, cursorOptions, boundParams, es);
   } else {
-    result = standard_planner(parse, query_string, cursorOptions, boundParams);
+    result = standard_planner(parse, query_string, cursorOptions, boundParams, es);
   }
 
   if (should_measure) {
