@@ -6,6 +6,7 @@
 
 - **Linux Only**: Relies on the `perf_event_open` syscall.
 - **Privileges**: Requires access to hardware counters so: `sudo sysctl -w kernel.perf_event_paranoid=-1`
+- **Compatibility**: I Intended to use it for development purposes, so with master only.
 
 ## Some things
 - **Granular Profiling**: Hardware counters for planner, executor, utilities, any query (using SPI with `pg_microbench_run()`)
